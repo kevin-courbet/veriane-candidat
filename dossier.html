@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vériane — Dossier client</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f3ef;color:#202b36;font:16px/1.65 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:36px 24px 80px}header{margin-bottom:32px}h1{line-height:1.25}h2{line-height:1.35}a{color:#174f75}nav ol{columns:2;column-gap:36px}nav li{break-inside:avoid;margin:5px 0}section{background:white;border:1px solid #d9dde0;padding:28px;margin:28px 0;border-radius:8px;scroll-margin-top:20px;overflow-wrap:anywhere}.document{overflow-x:auto}section>h2{font-size:1.1rem;color:#174f75;border-bottom:2px solid #d9dde0;padding-bottom:12px}.document h1{font-size:1.5rem}.document h2{font-size:1.15rem}table{border-collapse:collapse;width:100%;font-size:.88rem}td,th{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #d9dde0}th{background:#eef1f3}.meta,.discret,.doc-marque{color:#59636c;font-size:.9rem}.email-entete{background:#f3f5f6;padding:16px;margin-bottom:20px}.email-entete span{display:inline-block;min-width:65px;font-weight:600}.email-objet{font-weight:700;margin-top:8px}.facture-entete{display:flex;justify-content:space-between;gap:24px}.facture-titre{text-align:right;font-weight:700}.facture-client{margin:24px 0}.facture-totaux{max-width:360px;margin:24px 0 24px auto}.facture-totaux>div{display:flex;justify-content:space-between;gap:20px}.total{font-weight:700;border-top:1px solid #d9dde0}.vault-barre,.tableur-barre{padding:10px;background:#e9eef3;font-weight:600}.vault-fil{padding:12px 0}.tableau-svg{width:100%;min-width:600px;height:auto}.feutre-noir rect,.feutre-noir path{fill:none;stroke:#243442;stroke-width:2}.feutre-noir text{fill:#243442;text-anchor:middle;font-size:16px}.feutre-noir .petit{font-size:12px}.feutre-rouge text{fill:#b63737;text-anchor:middle;font-size:18px}.signature{text-align:right}footer{color:#59636c;font-size:.85rem}
+@media(max-width:640px){main{padding:20px 12px}section{padding:18px}nav ol{columns:1}.facture-entete{display:block}.facture-titre{text-align:left;margin-top:20px}}
+@media print{body{background:white;font-size:10pt}main{max-width:none;padding:0}nav,.retour{display:none}section{border:0;border-radius:0;padding:0;break-before:page}.document{overflow:visible}table{font-size:8pt}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body><main>
+<header id="sommaire"><p class="doc-marque">Exercice d'entretien · Dossier client</p><h1>Laboratoires Vériane</h1>
+<p>Pièces transmises à la suite de la première réunion. Lis d'abord le fichier <strong>README.md</strong> du dépôt, puis prépare tes questions pour les interlocuteurs représentés par l'intervieweur.</p>
+<p class="discret">Le cas, les personnes et les données de ce dossier sont fictifs. Date de référence du dossier : 20 octobre 2026.</p>
+<nav aria-label="Pièces du dossier"><ol><li><a href="#cr-reunion">Compte rendu de la réunion</a></li><li><a href="#note-chiffrage">Note de Julien</a></li><li><a href="#mail-sophie">E-mail de Sophie</a></li><li><a href="#mail-chu">Relance du CHU de Valmont</a></li><li><a href="#facture">Exemple de facture</a></li><li><a href="#grille">Annexe financière (Valmont)</a></li><li><a href="#ctms">Capture du CTMS</a></li><li><a href="#suivi-arc">Suivi des factures de Camille</a></li><li><a href="#tableau-blanc">Photo du tableau blanc</a></li><li><a href="#audit">Extrait du rapport d'audit</a></li><li><a href="#correspondance">Référentiel fournisseurs ↔ centres</a></li></ol></nav></header>
+<section id="cr-reunion"><h2>Compte rendu de la réunion</h2><div class="document">
+      <div class="doc-marque">Nautilus by Alcimed · Compte rendu</div>
+      <h1>Réunion de découverte : Laboratoires Vériane</h1>
+      <p class="meta">12 octobre 2026 · Sophie Marchand (Vériane), Julien Fabre (Nautilus by Alcimed) · Rédigé par Julien Fabre</p>
+      <h2>Ce que nous avons compris</h2>
+      <ul>
+        <li>Les hôpitaux (« centres investigateurs ») facturent les visites des patients des études cliniques. Ces
+        factures mettent 3 à 4 mois à être payées.</li>
+        <li>Les ARC (6 personnes) vérifient chaque facture à la main : « une journée par semaine chacun ».</li>
+        <li>Les ARC valident ensuite les factures dans SAP.</li>
+        <li>Le CHU de Valmont menace de suspendre les inclusions de patients (voir son e-mail).</li>
+        <li>Un audit interne a épinglé le processus (voir l'extrait).</li>
+        <li>Volume : « plusieurs centaines de factures par an », à préciser.</li>
+      </ul>
+      <h2>Pistes évoquées</h2>
+      <ul>
+        <li>Un portail fournisseurs où les hôpitaux déposent leurs factures et suivent leur paiement.</li>
+        <li>De l'IA / OCR pour lire les factures PDF.</li>
+        <li>Un circuit de validation.</li>
+      </ul>
+      <h2>Points ouverts</h2>
+      <ul>
+        <li>Budget : Sophie parle de « quelques dizaines de k€ ». À confirmer.</li>
+        <li>Calendrier : « avant la fin de l'année » ?</li>
+        <li>Comptabilité (Isabelle Roche) et DSI (Mathieu Lefort) n'étaient pas présents.</li>
+      </ul>
+      <h2>Prochaine étape</h2>
+      <p>Un consultant de Nautilus by Alcimed reprend la découverte et fait une proposition.</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="note-chiffrage"><h2>Note de Julien</h2><div class="document">
+      <p><strong>Interne, ne pas envoyer au client</strong></p>
+      <p>Chiffrage à la louche :<br>portail fournisseurs + OCR/IA + workflow de validation + reporting<br>
+      = <strong>90 à 120 j/h, soit 50 à 65 k€</strong>.</p>
+      <p>Sophie avait l'air partante pour le portail.</p>
+      <p>⚠ À challenger par le consultant !</p>
+      <p class="signature">Julien</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="mail-sophie"><h2>E-mail de Sophie</h2><div class="document">
+
+  <div class="email-entete">
+    <div><span>De</span>Sophie Marchand &lt;sophie.marchand@veriane.example&gt;</div>
+    <div><span>À</span>Julien Fabre &lt;julien.fabre@alcimed.example&gt;</div>
+
+    <div><span>Date</span>13 octobre 2026</div>
+    <div class="email-objet">Suite à notre échange : factures des centres</div>
+  </div>
+      <p>Bonjour Julien,</p>
+      <p>Merci pour le temps passé hier. Comme promis, voici quelques pièces : un exemple de facture, l'extrait de
+      convention de Valmont, une capture du CTMS, le fichier de suivi de Camille, l'extrait de l'audit, notre
+      référentiel fournisseurs et le mail du CHU de Valmont.</p>
+      <p>Ce qui compte pour moi est simple : que mes ARC arrêtent de passer leurs vendredis sur les factures, et que
+      Valmont arrête de menacer de suspendre les inclusions.</p>
+      <p>Je vous mets en relation avec Isabelle Roche (comptabilité fournisseurs) et Mathieu Lefort (DSI), ils
+      répondront à vos questions sur leurs parties.</p>
+      <p>Bien à vous,<br>Sophie</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="mail-chu"><h2>Relance du CHU de Valmont</h2><div class="document">
+
+  <div class="email-entete">
+    <div><span>De</span>Hélène Vasseur &lt;h.vasseur@chu-valmont.example&gt;</div>
+    <div><span>À</span>Sophie Marchand &lt;sophie.marchand@veriane.example&gt;</div>
+    <div><span>Cc</span>Trésorerie du CHU de Valmont</div>
+    <div><span>Date</span>8 octobre 2026</div>
+    <div class="email-objet">Factures impayées, études VRN-204 et VRN-311 : relance n°3</div>
+  </div>
+      <p>Madame,</p>
+      <p>Malgré nos relances, les factures suivantes restent impayées au-delà du délai de 60 jours prévu par la
+      convention :</p>
+      <table class="compact"><thead><tr><th>Facture</th><th>Date</th><th>Étude</th><th>Montant TTC</th></tr></thead><tbody><tr><td>FV-2026-0195</td><td>20.06.2026</td><td>VRN-311</td><td>1 656,00 €</td></tr><tr><td>FV-2026-0196</td><td>27.06.2026</td><td>VRN-204</td><td>1 488,00 €</td></tr><tr><td>FV-2026-0197</td><td>08.07.2026</td><td>VRN-204</td><td>1 980,00 €</td></tr><tr><td>FV-2026-0198</td><td>26.07.2026</td><td>VRN-204</td><td>1 764,00 €</td></tr></tbody></table>
+      <p>Soit un total de <strong>6 888,00 €</strong>. Nous vous avons par ailleurs renvoyé la facture
+      FV-2026-0196 le 16.08.2026, restée sans réponse.</p>
+      <p>À défaut de règlement sous 30 jours, la Direction de la recherche clinique et de l'innovation suspendra les
+      nouvelles inclusions dans l'étude VRN-204.</p>
+      <p>Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.</p>
+      <p>Hélène Vasseur<br>Directrice adjointe de la recherche clinique et de l'innovation<br>CHU de Valmont</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="facture"><h2>Exemple de facture</h2><div class="document">
+      <div class="facture-entete">
+        <div><strong>CHU de Valmont</strong><br>Direction de la recherche clinique et de l'innovation<br>
+        1, avenue du Professeur Lenoir, 54600 Valmont<br>SIRET 261 400 172 00018</div>
+        <div class="facture-titre">FACTURE<br><span>N° FV-2026-0196</span><br><span>du 27.06.2026</span></div>
+      </div>
+      <div class="facture-client">Laboratoires Vériane<br>Service comptabilité fournisseurs<br>12, quai de Dion-Bouton, 92800 Puteaux</div>
+      <p><strong>Objet :</strong> étude VRN-204, convention unique CU-VRN204-FR01, prestations réalisées</p>
+      <table class="facture-lignes"><thead><tr><th>Patient</th><th>Prestation</th><th>Date de visite</th><th>Qté</th><th>PU HT</th><th>Montant HT</th></tr></thead><tbody><tr><td>204-01-001</td><td>SCR : Visite de sélection</td><td>21.06.2026</td><td>1</td><td>180,00 €</td><td>180,00 €</td></tr><tr><td>204-01-001</td><td>V1 : Visite d&#39;inclusion (J1)</td><td>05.07.2026</td><td>1</td><td>650,00 €</td><td>650,00 €</td></tr><tr><td>204-01-001</td><td>V2 : Visite de traitement, cycle 2</td><td>26.07.2026</td><td>1</td><td>410,00 €</td><td>410,00 €</td></tr></tbody></table>
+      <div class="facture-totaux">
+        <div><span>Total HT</span>1 240,00 €</div>
+        <div><span>TVA 20 %</span>248,00 €</div>
+        <div class="total"><span>Total TTC</span>1 488,00 €</div>
+      </div>
+      <p class="discret">Paiement à 60 jours à compter de la date de facture, par virement au Trésor public.
+      Indemnité forfaitaire pour frais de recouvrement en cas de retard : 40 €.</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="grille"><h2>Annexe financière (Valmont)</h2><div class="document">
+      <div class="doc-marque">Convention unique, annexe 2 (extrait)</div>
+      <h1>Annexe financière : étude VRN-204, CHU de Valmont</h1>
+      <table class="compact"><thead><tr><th>Code</th><th>Prestation</th><th>Prix unitaire HT</th></tr></thead><tbody><tr><td>SCR</td><td>Visite de sélection</td><td>180,00 €</td></tr><tr><td>V1</td><td>Visite d&#39;inclusion (J1)</td><td>650,00 €</td></tr><tr><td>V2</td><td>Visite de traitement, cycle 2</td><td>410,00 €</td></tr><tr><td>V3</td><td>Visite de traitement, cycle 3</td><td>410,00 €</td></tr><tr><td>V4</td><td>Visite de traitement, cycle 4</td><td>410,00 €</td></tr><tr><td>V5</td><td>Visite de traitement, cycle 5</td><td>410,00 €</td></tr><tr><td>V6</td><td>Visite de traitement, cycle 6</td><td>410,00 €</td></tr><tr><td>V7</td><td>Visite de traitement, cycle 7</td><td>410,00 €</td></tr><tr><td>V8</td><td>Visite de traitement, cycle 8</td><td>410,00 €</td></tr><tr><td>EOT</td><td>Visite de fin de traitement</td><td>480,00 €</td></tr><tr><td>FU1</td><td>Visite de suivi à 3 mois</td><td>220,00 €</td></tr><tr><td>ECHEC_SEL</td><td>Échec de sélection</td><td>150,00 €</td></tr><tr><td>FRAIS_DEMARRAGE</td><td>Frais de mise en place de l&#39;étude</td><td>2 500,00 €</td></tr><tr><td>FRAIS_ANNUELS</td><td>Frais de gestion annuels</td><td>900,00 €</td></tr></tbody></table>
+      <p><strong>Art. 3.2.</strong> Les prix ci-dessus sont fermes et non révisables pendant la durée de l'étude.
+      Toute modification fait l'objet d'un avenant signé par les parties.</p>
+      <p><strong>Art. 3.4.</strong> L'échec de sélection est rémunéré lorsque la visite de sélection a été réalisée
+      et que le patient n'a pas été inclus.</p>
+      <p><strong>Art. 3.5.</strong> Les frais de mise en place sont dus une seule fois. Les frais de gestion annuels sont
+      dus une fois par année civile.</p>
+      <p><strong>Art. 4.</strong> Le centre facture les prestations réalisées au fil de l'eau. Le promoteur règle les
+      factures dans un délai de 60 jours à compter de leur date d'émission.</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="ctms"><h2>Capture du CTMS</h2><div class="document">
+      <div class="vault-barre">Vault CTMS <span>Vériane · Production</span></div>
+      <div class="vault-fil">Studies › VRN-204 › Sites › FR-01 CHU de Valmont › Subjects › <strong>204-01-001</strong></div>
+      <table class="vault"><thead><tr><th>Visit</th><th>Visit date</th><th>Status</th></tr></thead><tbody><tr><td>SCR</td><td>21.06.2026</td><td><span class="vault-statut sdv_complete">SDV Complete</span></td></tr><tr><td>V1</td><td>05.07.2026</td><td><span class="vault-statut sdv_complete">SDV Complete</span></td></tr><tr><td>V2</td><td>26.07.2026</td><td><span class="vault-statut sdv_complete">SDV Complete</span></td></tr><tr><td>V3</td><td>16.08.2026</td><td><span class="vault-statut missed">Missed</span></td></tr><tr><td>V4</td><td>06.09.2026</td><td><span class="vault-statut sdv_complete">SDV Complete</span></td></tr><tr><td>V5</td><td>27.09.2026</td><td><span class="vault-statut completed">Completed</span></td></tr><tr><td>V6</td><td>18.10.2026</td><td><span class="vault-statut completed">Completed</span></td></tr><tr><td>V7</td><td><em>08.11.2026 (planned)</em></td><td><span class="vault-statut planned">Planned</span></td></tr><tr><td>V8</td><td><em>29.11.2026 (planned)</em></td><td><span class="vault-statut planned">Planned</span></td></tr><tr><td>EOT</td><td><em>20.12.2026 (planned)</em></td><td><span class="vault-statut planned">Planned</span></td></tr><tr><td>FU1</td><td><em>20.03.2027 (planned)</em></td><td><span class="vault-statut planned">Planned</span></td></tr></tbody></table>
+      <p class="discret">Capture transmise par Sophie. « Completed » : visite réalisée. « SDV Complete » : données
+      sources vérifiées par l'ARC.</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="suivi-arc"><h2>Suivi des factures de Camille</h2><div class="document">
+      <div class="tableur-barre">suivi_factures_camille_v7_FINAL.xlsx</div>
+      <table class="tableur"><thead><tr><th>Reçue le</th><th>Centre</th><th>N° facture</th><th>Montant TTC</th><th>Vérifié ?</th><th>Commentaire</th></tr></thead><tbody><tr><td>24.06.2026</td><td>Valmont</td><td>FV-2026-0195</td><td>1 656,00 €</td><td>oui</td><td>OK, BAP envoyé à Isabelle</td></tr><tr><td>01.07.2026</td><td>Valmont</td><td>FV-2026-0196</td><td>1 488,00 €</td><td>oui</td><td>OK, BAP envoyé à Isabelle</td></tr><tr><td>12.07.2026</td><td>Valmont</td><td>FV-2026-0197</td><td>1 980,00 €</td><td>oui</td><td>OK, BAP envoyé à Isabelle</td></tr><tr><td>30.07.2026</td><td>Valmont</td><td>FV-2026-0198</td><td>1 764,00 €</td><td>en cours</td><td>SDV pas faite, attendre le prochain monitoring</td></tr><tr><td>16.08.2026</td><td>Valmont</td><td>FV 2026 0196</td><td>1 488,00 €</td><td>en cours</td><td>mêmes lignes qu&#39;une autre ??? à vérifier</td></tr><tr><td>20.08.2026</td><td>Valmont</td><td>FV-2026-0199</td><td>983,66 €</td><td>oui</td><td>OK, BAP envoyé à Isabelle</td></tr><tr><td>27.08.2026</td><td>Valmont</td><td>FV-2026-0200</td><td>1 020,00 €</td><td></td><td></td></tr><tr><td>10.09.2026</td><td>Valmont</td><td>FV-2026-0201</td><td>2 472,00 €</td><td></td><td></td></tr><tr><td>17.09.2026</td><td>Valmont</td><td>FV-2026-0202</td><td>849,60 €</td><td>en cours</td><td>prix bizarres, recalculer</td></tr></tbody></table></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="tableau-blanc"><h2>Photo du tableau blanc</h2><div class="document">
+      <svg viewBox="0 0 760 420" class="tableau-svg" role="img" aria-label="Schéma du processus actuel dessiné au tableau">
+        <defs><marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker></defs>
+        <g class="feutre-noir">
+          <rect x="20" y="40" width="130" height="60" rx="8"/><text x="85" y="68">CHU</text><text x="85" y="88" class="petit">PDF par mail</text>
+          <rect x="210" y="40" width="160" height="60" rx="8"/><text x="290" y="68">Compta (Isabelle)</text><text x="290" y="88" class="petit">SAP : facture bloquée</text>
+          <rect x="430" y="40" width="300" height="110" rx="8"/><text x="580" y="66">ARC</text>
+          <text x="580" y="92" class="petit">CTMS : visite faite ? SDV ?</text><text x="580" y="114" class="petit">grille de la convention : prix ?</text><text x="580" y="136" class="petit">déjà payé ? (Excel perso)</text>
+          <rect x="430" y="230" width="300" height="60" rx="8"/><text x="580" y="266">mail « bon pour paiement »</text>
+          <rect x="210" y="230" width="160" height="60" rx="8"/><text x="290" y="258">Compta débloque</text><text x="290" y="278" class="petit">à la main dans SAP</text>
+          <rect x="20" y="230" width="130" height="60" rx="8"/><text x="85" y="258">Paiement</text><text x="85" y="278" class="petit">mardi / vendredi</text>
+          <path d="M150 70 L205 70" marker-end="url(#fleche)"/><path d="M370 70 L425 70" marker-end="url(#fleche)"/>
+          <path d="M580 150 L580 225" marker-end="url(#fleche)"/><path d="M430 260 L375 260" marker-end="url(#fleche)"/><path d="M210 260 L155 260" marker-end="url(#fleche)"/>
+          <text x="395" y="58" class="petit">mail</text>
+        </g>
+        <g class="feutre-rouge">
+          <text x="300" y="340">3 à 4 mois !!</text>
+          <text x="610" y="190">1 j / semaine / ARC</text>
+          <text x="120" y="160">portail ??</text>
+          <text x="120" y="185">IA pour lire les PDF ?</text>
+          <text x="640" y="330">doublons !</text>
+          <path d="M240 330 C 200 360, 120 350, 90 300" fill="none"/>
+        </g>
+      </svg>
+      <p class="discret">Photo prise par Julien à la fin de la réunion.</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="audit"><h2>Extrait du rapport d'audit</h2><div class="document">
+      <div class="doc-marque">Audit interne · Confidentiel</div>
+      <h1>Processus de paiement des essais cliniques, juin 2026</h1>
+      <h2>Constat 4.2 : priorité élevée</h2>
+      <p>La validation des factures des centres investigateurs se fait par e-mail, sans traçabilité formelle de
+      l'auteur, de la date et des contrôles réalisés.</p>
+      <p>Sur un échantillon de 60 factures, 7 (12 %) ont été payées avant la vérification des données sources (SDV)
+      des visites facturées. Aucun contrôle systématique des doublons n'est en place.</p>
+      <h2>Recommandation R4.2</h2>
+      <p>Mettre en place un circuit de validation tracé, garantissant qu'aucune visite n'est payée avant sa
+      vérification et que chaque facture n'est payée qu'une fois.</p>
+      <p><strong>Responsables :</strong> S. Marchand, I. Roche · <strong>Échéance :</strong> 31 mars 2027</p></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<section id="correspondance"><h2>Référentiel fournisseurs ↔ centres</h2><div class="document">
+      <div class="tableur-barre">SharePoint › Opérations cliniques › Référentiels › correspondance_fournisseurs_centres.xlsx · modifié le 12 mars</div>
+      <table class="tableur"><thead><tr><th>Fournisseur SAP</th><th>Nom</th><th>Centre CTMS</th><th>Études</th><th>ARC référent</th></tr></thead><tbody><tr><td>F100231</td><td>CHU de Valmont</td><td>FR-01</td><td>VRN-204, VRN-311</td><td>Camille Roux</td></tr><tr><td>F100245</td><td>CHU de Bréville</td><td>FR-02</td><td>VRN-204</td><td>Nicolas Petit</td></tr><tr><td>F100377</td><td>Hôpital Saint-Aubin</td><td>FR-03</td><td>VRN-204</td><td>Léa Benali</td></tr><tr><td>F100412</td><td>Centre hospitalier de Marsac</td><td>FR-04</td><td>VRN-311</td><td>Hugo Martin</td></tr><tr><td>F100503</td><td>Institut de cancérologie Atlantique</td><td>FR-05</td><td>VRN-204</td><td>Inès Garnier</td></tr><tr><td>F100519</td><td>CHU de Montclair</td><td>FR-06</td><td>VRN-311</td><td>Thomas Lambert</td></tr><tr><td>F100702</td><td>Hôpital privé du Parc</td><td>FR-08</td><td>VRN-311</td><td>Hugo Martin</td></tr></tbody></table></div><p class="retour"><a href="#sommaire">Retour au sommaire</a></p></section>
+<footer>Support fictif de mise en situation professionnelle. Aucun accès à un système réel n'est nécessaire.</footer>
+</main></body></html>
