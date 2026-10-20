@@ -33,7 +33,7 @@
 <li><strong>Explore avec ton agent.</strong> Il peut lire les pièces et la note <code>ENVIRONNEMENT-TECHNIQUE.md</code> de Mathieu pour expliquer les systèmes du client et préparer tes questions.</li>
 <li><strong>Échange avec le client à l'oral.</strong> L'intervieweur représente Sophie, Isabelle et Mathieu. Précise à qui s'adresse chaque question ; transmets les réponses utiles à ton agent.</li>
 <li><strong>Propose</strong>, dans <code>PROPOSAL.md</code>, le processus actuel et cible, ce que tu gardes ou construis, pourquoi et avec quelles exigences.</li>
-<li><strong>Construis et vérifie</strong> une démonstration locale, avec ton agent, dans le périmètre convenu avec l'intervieweur. Les contrats techniques sont documentés ; aucun service distant n'est fourni.</li>
+<li><strong>Construis et vérifie</strong> une démonstration locale, avec ton agent, dans le périmètre convenu avec l'intervieweur. Microsoft Lists est facultatif. Présente les classifications et les notifications à la comptabilité dans la sortie de ton traitement. L’intervieweur fournit les accès au staging lorsqu’il est disponible.</li>
 </ol>
 <p class="discret">Pense à voix haute, explique tes choix et distingue les faits des hypothèses.</p>
 <p class="discret">Molette : zoom · glisser le fond : se déplacer · double-clic sur le fond : post-it. Tes notes restent dans ce navigateur si le stockage local est disponible.</p>`
@@ -318,14 +318,15 @@
       rotation: -0.6,
       html: `<div class="email-entete"><div><span>De</span>Mathieu Lefort · DSI Vériane</div><div><span>À</span>Équipe de mission</div><div class="email-objet">Environnement technique et interfaces existantes</div></div>
 <p>Bonjour,</p><p>Vous trouverez dans ma note les informations techniques disponibles pour votre mission :</p>
-<ul><li>SAP S/4HANA, capture des factures et passerelle de fichiers ;</li><li>exports nocturnes et formats CSV ;</li><li>flux existant de déblocage ou rejet ;</li><li>API du CTMS et ses contraintes ;</li><li>outils Microsoft 365 et interfaces de listes ;</li><li>hébergement et exploitation.</li></ul>
+<ul><li>SAP S/4HANA, capture des factures et passerelle de fichiers ;</li><li>exports nocturnes et formats CSV ;</li><li>flux existant de déblocage ou rejet ;</li><li>API du CTMS et ses contraintes ;</li><li>outils Microsoft 365 et interfaces de listes (facultatifs) ;</li><li>hébergement et exploitation.</li></ul>
 <p><strong>Ouvre cette feuille en grand (⤢) pour lire la note complète.</strong></p>
 <p>Ton agent peut aussi lire directement <code>ENVIRONNEMENT-TECHNIQUE.md</code> dans le dépôt.</p>
-<p class="discret">Cette version fournit les contrats des interfaces, sans service distant ni identifiants d'accès.</p><p>Mathieu</p>`,
+<p class="discret">Les accès au staging sont transmis séparément par l’intervieweur lorsqu’il est disponible. Microsoft Lists est facultatif ; les notifications sont présentées dans la sortie du traitement.</p><p>Mathieu</p>`,
       lectureHtml: `<h1>Environnement technique de Vériane</h1>
 <p><strong>Note de Mathieu Lefort — Architecte intégration, DSI</strong></p>
 <p>Cette note décrit l'environnement du client fictif et les contrats des interfaces de l'exercice. Elle peut être lue directement par ton assistant ou agent.</p>
-<p><strong>Disponibilité dans ce dépôt :</strong> documentation et pièces du dossier uniquement. Aucun serveur, simulateur exécutable, accès réseau ni identifiant n'est fourni. Les chemins HTTP ci-dessous décrivent des interfaces ; ils ne désignent pas des services en ligne accessibles depuis ce dépôt. Pour la démonstration, des fichiers et des doubles locaux peuvent représenter les systèmes concernés, selon le périmètre convenu avec l'intervieweur.</p>
+<p><strong>Disponibilité :</strong> ce dépôt contient les documents, pas les services. L'intervieweur fournit séparément l'adresse et les accès au staging lorsqu'il est disponible. Les chemins HTTP ci-dessous sont relatifs à cette adresse. Aucun tenant Microsoft ni simulateur à construire n'est demandé.</p>
+<p><strong>Périmètre minimum :</strong> contrôler et classifier les factures, puis présenter les notifications destinées à la comptabilité dans la sortie du traitement (fichier ou console). Microsoft Lists est facultatif. Le staging existant vérifie les statuts SAP obtenus par le flux de déblocage/rejet décrit ci-dessous. Les motifs des factures laissées bloquées et le contenu des notifications sont examinés avec l'intervieweur. Il n'existe pas d'API de notification ni de relais SMTP disponible en staging.</p>
 <h2>Applications et accès existants</h2>
 <table>
 <thead>
@@ -452,7 +453,7 @@
 <p>Cet exemple illustre uniquement la structure ; il n'est pas un jeu de données de l'exercice.</p>
 <p>Les statuts possibles sont <code>planned</code>, <code>completed</code>, <code>sdv_complete</code>, <code>missed</code> et <code>screen_failure</code>. <code>completed</code> indique une visite réalisée ; <code>sdv_complete</code> indique que ses données sources ont été vérifiées.</p>
 <p>La limite est <strong>20 appels par tranche de 10 secondes et par session</strong>. Un dépassement retourne <code>429</code> avec un en-tête <code>Retry-After</code>. Une session absente, invalide ou expirée retourne <code>401</code>. Un centre peut temporairement retourner <code>503</code> pendant une migration. Une erreur n'est pas une réponse métier vide.</p>
-<h2>Outils collaboratifs disponibles</h2>
+<h2>Outils collaboratifs disponibles (facultatifs)</h2>
 <h3>SharePoint et Microsoft Lists</h3>
 <p>Les licences standard permettent des listes structurées, une vue tableau par statut et l'historique des modifications. L'accès applicatif nécessite un enregistrement Entra ID avec des droits limités au site concerné.</p>
 <p>La DSI a préparé le schéma d'une liste <strong>« Factures des centres »</strong>, site logique <code>opsclin</code>, liste <code>factures-centres</code>.</p>

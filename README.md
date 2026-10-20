@@ -17,7 +17,9 @@ Ton agent peut lire les documents et la note **[ENVIRONNEMENT-TECHNIQUE.md](ENVI
 
 Lis le dossier avec ton agent. Pose tes questions à l'intervieweur, qui joue les interlocuteurs du client, puis transmets les réponses à ton agent. Signale les hypothèses et les informations manquantes.
 
-Conviens du périmètre avec l'intervieweur avant de coder. Construis et vérifie une démonstration locale ; les services distants peuvent être simulés. Tu dois pouvoir expliquer tes choix et le code produit.
+Conviens du périmètre avec l'intervieweur avant de coder. Construis et vérifie ton traitement avec les données et les accès fournis. Tu dois pouvoir expliquer tes choix et le code produit.
+
+**Microsoft Lists est facultatif.** Présente les classifications et les notifications à la comptabilité dans la sortie de ton traitement. Si des accès au staging te sont fournis, utilise ses interfaces existantes et son bilan SAP.
 
 ## À remettre
 

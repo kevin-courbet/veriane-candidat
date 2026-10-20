@@ -4,7 +4,9 @@
 
 Cette note décrit l'environnement du client fictif et les contrats des interfaces de l'exercice. Elle peut être lue directement par ton assistant ou agent.
 
-**Disponibilité dans ce dépôt :** documentation et pièces du dossier uniquement. Aucun serveur, simulateur exécutable, accès réseau ni identifiant n'est fourni. Les chemins HTTP ci-dessous décrivent des interfaces ; ils ne désignent pas des services en ligne accessibles depuis ce dépôt. Pour la démonstration, des fichiers et des doubles locaux peuvent représenter les systèmes concernés, selon le périmètre convenu avec l'intervieweur.
+**Disponibilité :** ce dépôt contient les documents, pas les services. L'intervieweur fournit séparément l'adresse et les accès au staging lorsqu'il est disponible. Les chemins HTTP ci-dessous sont relatifs à cette adresse. Aucun tenant Microsoft ni simulateur à construire n'est demandé.
+
+**Périmètre minimum :** contrôler et classifier les factures, puis présenter les notifications destinées à la comptabilité dans la sortie du traitement (fichier ou console). Microsoft Lists est facultatif. Le staging existant vérifie les statuts SAP obtenus par le flux de déblocage/rejet décrit ci-dessous. Les motifs des factures laissées bloquées et le contenu des notifications sont examinés avec l'intervieweur. Il n'existe pas d'API de notification ni de relais SMTP disponible en staging.
 
 ## Applications et accès existants
 
@@ -164,7 +166,7 @@ Les statuts possibles sont `planned`, `completed`, `sdv_complete`, `missed` et `
 
 La limite est **20 appels par tranche de 10 secondes et par session**. Un dépassement retourne `429` avec un en-tête `Retry-After`. Une session absente, invalide ou expirée retourne `401`. Un centre peut temporairement retourner `503` pendant une migration. Une erreur n'est pas une réponse métier vide.
 
-## Outils collaboratifs disponibles
+## Outils collaboratifs disponibles (facultatifs)
 
 ### SharePoint et Microsoft Lists
 
