@@ -1,0 +1,8 @@
+{
+  "name": "veriane-candidat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/bureau.ts --outfile assets/bureau.js --target browser --format iife"
+  }
+}

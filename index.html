@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dossier Vériane · Bureau</title>
+    <link rel="stylesheet" href="assets/bureau.css" />
+  </head>
+  <body>
+    <header class="barre">
+      <div class="barre-titre">Dossier <strong>Vériane</strong> · factures des centres investigateurs</div>
+      <div class="barre-outils">
+        <button id="zoom-moins" title="Dézoomer" aria-label="Dézoomer">−</button>
+        <span id="zoom-niveau">100 %</span>
+        <button id="zoom-plus" title="Zoomer" aria-label="Zoomer">+</button>
+        <button id="tout-voir" title="Voir tout le bureau">Tout voir</button>
+        <button id="ranger" title="Remettre les documents à leur place d'origine">Ranger</button>
+        <button id="technique">Environnement technique</button>
+        <a href="dossier.html" target="_blank" rel="noopener">Version à imprimer ↗</a>
+      </div>
+    </header>
+    <div class="espace">
+      <div id="vue" class="vue" tabindex="0" aria-label="Bureau : glisse le fond pour te déplacer, molette pour zoomer, double-clic pour un post-it">
+        <div id="monde" class="monde"></div>
+      </div>
+    </div>
+    <div id="lecture" class="lecture" hidden>
+      <div class="lecture-feuille" role="dialog" aria-modal="true" aria-labelledby="lecture-titre">
+        <div class="lecture-entete"><span id="lecture-titre"></span><button id="lecture-fermer" aria-label="Fermer">✕</button></div>
+        <div id="lecture-contenu" class="lecture-contenu"></div>
+      </div>
+    </div>
+    <noscript>Active JavaScript pour utiliser le bureau, ou ouvre <a href="dossier.html">la version à lire et imprimer</a>.</noscript>
+    <script src="assets/bureau.js" defer></script>
+  </body>
+</html>

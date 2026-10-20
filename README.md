@@ -13,9 +13,17 @@ git clone https://github.com/kevin-courbet/veriane-candidat.git
 cd veriane-candidat
 ```
 
-Ouvre ensuite **[dossier.html](dossier.html)** dans ton navigateur depuis le dossier cloné, par exemple en double-cliquant sur le fichier. Il fonctionne hors ligne : aucune installation, aucun serveur et aucun compte ne sont nécessaires pour lire les pièces.
+Ouvre ensuite **[index.html](index.html)** dans ton navigateur depuis le dossier cloné, par exemple en double-cliquant sur le fichier. Tu retrouves le bureau interactif : documents à déplacer, zoom, lecture en grand et post-it personnels. Il fonctionne hors ligne : aucune installation, aucun serveur et aucun compte ne sont nécessaires.
 
-Sur GitHub, le fichier HTML s'affiche comme du code : ouvre la copie locale pour lire le dossier mis en page. Tu peux aussi l'imprimer depuis ton navigateur.
+- Glisse le fond pour te déplacer et utilise la molette ou les boutons pour zoomer.
+- Glisse l'en-tête d'une feuille pour la déplacer ; double-clique sur son en-tête ou utilise **⤢** pour la lire en grand.
+- Double-clique sur le fond pour ajouter un post-it. Les positions et les notes sont conservées dans ton navigateur lorsque le stockage local est disponible.
+- **Tout voir** cadre l'ensemble du dossier ; **Ranger** remet les documents à leur place.
+- **Environnement technique** ouvre la note de Mathieu dans le bureau.
+
+Les échanges avec le client se font à l'oral avec l'intervieweur. Le bureau n'a pas de messagerie intégrée.
+
+Sur GitHub, les fichiers HTML s'affichent comme du code : ouvre la copie locale pour utiliser le bureau. Le fichier **[dossier.html](dossier.html)** reste disponible en lecture linéaire et pour l'impression.
 
 La note **[ENVIRONNEMENT-TECHNIQUE.md](ENVIRONNEMENT-TECHNIQUE.md)** contient les informations transmises par Mathieu (DSI) : applications existantes, interfaces, formats de fichiers, contraintes d'accès et hébergement. Ton agent peut lire directement ce fichier pour répondre à tes questions sur l'environnement client.
 
@@ -53,7 +61,7 @@ Tu peux demander à revenir vers un interlocuteur à tout moment. Pense à voix 
 
 ## Pièces du dossier
 
-Le fichier [dossier.html](dossier.html) rassemble :
+Le bureau interactif et le fichier [dossier.html](dossier.html) rassemblent :
 
 1. Le compte rendu de la première réunion.
 2. La note de chiffrage de Julien.
@@ -84,3 +92,7 @@ Pour la conception, le développement et la vérification, tu peux utiliser ton 
 Travaille dans ton clone local. Les modalités de remise du travail seront précisées pendant l'entretien ; aucun droit d'écriture sur ce dépôt n'est nécessaire.
 
 Privilégie une petite démonstration que tu comprends et sais vérifier.
+
+## Modifier le support (facultatif)
+
+Les fichiers prêts à ouvrir sont déjà inclus. Le code TypeScript du bureau et les documents statiques sont dans `src/`. Si tu modifies le support et disposes de Bun, `bun run build` régénère le fichier JavaScript utilisé par `index.html`. Cette étape n'est pas nécessaire pour réaliser le cas.
